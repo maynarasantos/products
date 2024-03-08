@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/teste',[ProductController::class, 'teste'] );
+
+//get- buscar dados 
+//post- envia dados (cadastrar algo)
+//put envia dados (atualizar algo)
+//delete-deletar dados
